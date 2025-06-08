@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تیم آرگو</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      function smoothScroll(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {primary:'#3b82f6', secondary:'#10b981'},
+            borderRadius:{
+              'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <style>
+        @font-face {
+            font-family: iranyekan;
+            src: url('/static/IRANYekanBlack.ttf');
+        }
+
+        @font-face {
+            font-family: iranyekanl;
+            src: url('/static/IRANYekanLight.ttf');
+        }
+
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'iranyekanl';
+            background: linear-gradient(135deg, #3c6dc7 0%, #1129ff 100%);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'iranyekan';
+        }
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=Abstract modern professional background with soft blue gradient and subtle geometric shapes, clean minimalist design suitable for a professional portfolio, high quality digital art&width=1200&height=600&seq=12345&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(98, 32, 184, 0.1);
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="align-items: center;">
+    <section class="hero-bg relative py-16" aria-label="بخش معرفی تیم آرگو">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent" aria-hidden="true"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white" style="-webkit-text-stroke: 0.4px rgb(0, 0, 0);">تیم آرگو</h1>
+                <p class="text-xl text-white/90 mb-8" style="-webkit-text-stroke:1px rgb(0, 0, 0);">متخصصان خفن و حرفه‌ای در خدمت شما</p>
+                <button class="bg-white transition-all text-primary px-8 py-3 rounded-button font-medium shadow-lg hover:shadow-xl whitespace-nowrap duration-500 ease-in-out" 
+                        type="button" 
+                        onclick="smoothScroll('about')" 
+                        aria-label="اسکرول به بخش درباره ما">
+                    ارتباط با ما
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white" aria-labelledby="about-heading">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 id="about-heading" class="text-3xl md:text-4xl font-bold mb-4">درباره ما</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6" aria-hidden="true"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما تیمی از متخصصان با تجربه و حرفه‌ای هستیم که با ترکیب مهارت‌های منحصر به فرد خود، راه‌حل‌های نوآورانه ارائه می‌دهیم.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 justify-center" role="list">
+                <article class="profile-card bg-white rounded-xl shadow-lg p-8 flex-1 max-w-md mx-auto md:mx-0 transition-all duration-300 border border-gray-100" role="listitem">
+                    <div class="flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-primary/20">
+                            <img src="../static/IMG_20250215_000259.jpg" alt="علی عزیزی" class="w-full h-full object-cover" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">علی عزیزی</h3>
+                        <p class="text-primary font-medium mb-4">طراح و توسعه‌دهنده وب</p>
+                        <p class="text-gray-600 text-center mb-6">با بیش از ۷ سال تجربه در طراحی و توسعه وب‌سایت‌های حرفه‌ای و کاربرپسند. متخصص در فرانت‌اند و تجربه کاربری.</p>                    
+                    </div>
+                </article>
+
+                <article class="profile-card bg-white rounded-xl shadow-lg p-8 flex-1 max-w-md mx-auto md:mx-0 transition-all duration-300 border border-gray-100" role="listitem">
+                    <div class="flex flex-col items-center">
+                        <div class="w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-primary/20">
+                            <img src="../static/IMG_20250226_155247.jpg" alt="ایلیا اخوان" class="w-full h-full object-cover" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">ایلیا اخوان</h3>
+                        <p class="text-primary font-medium mb-4">متخصص منطق و سرور سایت</p>
+                        <p class="text-gray-600 text-center mb-6">متخصص در زمینه بک اند سایت و منطق برنامه نویسی و امنیت سایت و سرور و دیتابیس سایت با بیش از ۸ سال تخصص و تجربه</p>                   
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-50" aria-labelledby="services-heading">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 id="services-heading" class="text-3xl md:text-4xl font-bold mb-4">خدمات ما</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6" aria-hidden="true"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما مجموعه‌ای از خدمات تخصصی را ارائه می‌دهیم تا کسب و کار شما را به سطح بالاتری ببریم.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+                <article class="service-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 border border-gray-100" role="listitem" tabindex="0">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6 mx-auto" aria-hidden="true">
+                        <i class="ri-code-s-slash-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">طراحی و توسعه وب</h3>
+                    <p class="text-gray-600 text-center">طراحی و توسعه وب‌سایت‌های مدرن، واکنش‌گرا و کاربرپسند با استفاده از آخرین تکنولوژی‌های روز دنیا.</p>
+                </article>
+
+                <article class="service-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 border border-gray-100" role="listitem" tabindex="0">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6 mx-auto" aria-hidden="true">
+                        <i class="ri-line-chart-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">مشاوره و پشتیبانی</h3>
+                    <p class="text-gray-600 text-center">مشاوره دادن برای انتخاب بهتر سایت و کم شدن هزینه ها و تبلیغات و پشتیبانی از سایت به صورت روزانه </p>
+                </article>
+
+                <article class="service-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 border border-gray-100" role="listitem" tabindex="0">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6 mx-auto" aria-hidden="true">
+                        <i class="ri-search-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">بهینه‌سازی موتورهای جستجو</h3>
+                    <p class="text-gray-600 text-center">افزایش رتبه وب‌سایت شما در موتورهای جستجو با استفاده از تکنیک‌های SEO استاندارد و پیشرفته.</p>
+                </article>
+
+                <article class="service-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 border border-gray-100" role="listitem" tabindex="0">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6 mx-auto" aria-hidden="true">
+                        <i class="ri-smartphone-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">توسعه اپلیکیشن موبایل</h3>
+                    <p class="text-gray-600 text-center">طراحی و توسعه اپلیکیشن‌های موبایل کاربردی و جذاب برای پلتفرم‌های iOS و اندروید.</p>
+                </article>
+
+                <article class="service-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 border border-gray-100" role="listitem" tabindex="0">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6 mx-auto" aria-hidden="true">
+                        <i class="ri-palette-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">طراحی گرافیک و UI/UX</h3>
+                    <p class="text-gray-600 text-center">طراحی رابط کاربری زیبا و تجربه کاربری عالی برای وب‌سایت‌ها و اپلیکیشن‌های موبایل.</p>
+                </article>
+
+                <article class="service-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 border border-gray-100" role="listitem" tabindex="0">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6 mx-auto" aria-hidden="true">
+                        <i class="ri-customer-service-2-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">پشتیبانی برای گزارش</h3>
+                    <p class="text-gray-600 text-center">پشتیبانی بدرصورت گزارش هرگونه اشکال در سایت و امنیت آن به صورت روزانه و انجام درخواست ها برای اضافه کردن هرچیزی به سایت</p>
+                </article>
+            </div>
+        </div>
+    </section>
+            <section id="portfolio" class="py-20 bg-white" aria-labelledby="portfolio-heading">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 id="portfolio-heading" class="text-3xl md:text-4xl font-bold mb-4">نمونه کارهای ما</h2>
+                        <div class="w-24 h-1 bg-primary mx-auto mb-6" aria-hidden="true"></div>
+                        <p class="text-gray-600 max-w-2xl mx-auto">برخی از پروژه‌های موفق ما که با همکاری مشتریان عزیز به سرانجام رسیده‌اند.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
+                    {% for kar in kar_objects %}
+                        <article class="overflow-hidden rounded-xl shadow-md group text-center" role="listitem" tabindex="0">
+                            <div class="relative h-64">
+                                <img src="{{ kar.image.url }}" alt="{{ kar.name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+                                <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center" aria-hidden="true">
+                                </div>
+                            </div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">{{ kar.name }}</h3>
+                                <p class="text-gray-600">{{ kar.description }}</p>
+                            </div>
+                        </article>
+                    {% endfor %}
+                    </div>
+                </div>
+            </section>
+    <section id="contact" class="py-20 bg-gray-50 scroll-container" aria-labelledby="contact-heading">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold mb-4">ارتباط  با ما</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6" aria-hidden="true"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">برای مشاوره رایگان و یا درخواست همکاری با ما در تماس باشید.</p>
+            </div>
+            <div id="about" class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <section class="bg-primary text-white p-8 md:w-2/5" aria-label="اطلاعات تماس تیم آرگو">
+                        <h3 class="text-2xl font-bold mb-6">اطلاعات تماس</h3>
+                        <address class="flex flex-col gap-6 not-italic">
+                            <div class="flex items-start mb-6">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white mt-1 ml-4">
+                                    <i class="ri-map-pin-line ri-lg" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">سایت</h4>
+                                    <a href="https://appgod232944.github.io/argo/" target="_blank" rel="noopener noreferrer">ARGO COMPANEY</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-6">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white mt-1 ml-4">
+                                    <i class="ri-phone-fill ri-lg" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">تلفن:</h4>
+                                    <p>۰۹۳۶۲۷۷۵۷۰۹</p>
+                                    <p>۰۹۰۳۷۵۲۰۵۷۷</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-6">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white mt-1 ml-4">
+                                    <i class="ri-mail-fill ri-lg" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">ایمیل:</h4>
+                                    <p>aliazizialala@gmail.com</p>
+                                    <p>appgod.coder@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-8">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white mt-1 ml-4">
+                                    <i class="ri-instagram-fill ri-lg" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">اینستاگرام</h4>
+                                    <p>its-appgod</p>
+                                </div>
+                            </div>
+                        </address>
+                    </section>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.106745375447!2d51.6261214!3d35.5263597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f91e9006e5f0b7f%3A0xdfd44d70f0f37989!2z2LTYsdqp2Kog2KfYs9iq2KfYqtuM2qkg2KfYrtmI2KfZhg!5e0!3m2!1sen!2s!4v1747822226442!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="نقشه محل تیم آرگو"></iframe>                
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
